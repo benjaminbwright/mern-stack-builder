@@ -2,6 +2,7 @@
 
 # install database
 if [[ $1 = "mongoose" ]]
+then
   cp -a templates/mongoose/. ./
 fi 
 

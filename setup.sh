@@ -4,7 +4,7 @@
 if [[ $1 = "mongoose" ]] || [[ $1 = "mongo" ]] || [[ $1 = "mongodb" ]]
 then
   cp -a templates/mongoose/. ./
-elif
+elif [[ $1 = "mysql" ]] || [[ $1 = "sequelize" ]]
 then
   cp -a templates/sequelize/. ./
 fi 

@@ -12,7 +12,7 @@ sed -i '' '/name/a \
 
 # install the node_modules
 echo "installing server dependencies"
-npm install
+yarn install
 
 # remove .git folder
 rm -rf .git
@@ -22,4 +22,4 @@ rm setup.sh
 
 # start up the app
 
-npm start
+yarn start

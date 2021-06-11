@@ -6,15 +6,19 @@ rm -rf .git
 # initialize git
 git init
 
+# install the node_modules
+echo "installing server dependencies"
+yarn install
+
 # install database and orm/odm setup
 if [[ $1 = "mongoose" ]] || [[ $1 = "mongo" ]] || [[ $1 = "mongodb" ]]
 then
   cp -a templates/mongoose/. ./
-  yarn install mongoose
+  yarn add mongoose
 elif [[ $1 = "mysql" ]] || [[ $1 = "sequelize" ]]
 then
   cp -a templates/sequelize/. ./
-  yarn install sequelize mysql2
+  yarn add sequelize mysql2
 fi
 
 # remove database templates
@@ -29,10 +33,6 @@ echo "adding proxy to client/package.json"
 sed -i '' '/name/a \
 \  "proxy": "http://localhost:4000", \
 ' client/package.json 
-
-# install the node_modules
-echo "installing server dependencies"
-yarn install
 
 # destroy setup file
 rm setup.sh

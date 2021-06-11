@@ -10,11 +10,11 @@ git init
 if [[ $1 = "mongoose" ]] || [[ $1 = "mongo" ]] || [[ $1 = "mongodb" ]]
 then
   cp -a templates/mongoose/. ./
-  npm i mongoose
+  yarn install mongoose
 elif [[ $1 = "mysql" ]] || [[ $1 = "sequelize" ]]
 then
   cp -a templates/sequelize/. ./
-  npm i sequelize mysql2
+  yarn install sequelize mysql2
 fi
 
 # remove database templates

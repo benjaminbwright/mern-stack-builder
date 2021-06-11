@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# remove .git folder
+rm -rf .git
+
 # install database and orm/odm setup
 if [[ $1 = "mongoose" ]] || [[ $1 = "mongo" ]] || [[ $1 = "mongodb" ]]
 then
@@ -24,9 +27,6 @@ sed -i '' '/name/a \
 # install the node_modules
 echo "installing server dependencies"
 yarn install
-
-# remove .git folder
-rm -rf .git
 
 # destroy setup file
 rm setup.sh

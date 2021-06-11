@@ -19,3 +19,7 @@ rm -rf .git
 
 # destroy setup file
 rm setup.sh
+
+# start up the app
+
+npm start

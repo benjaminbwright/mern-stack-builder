@@ -10,6 +10,10 @@ sed -i '' '/name/a \
 \  "proxy": "http://localhost:4000", \
 ' client/package.json 
 
+# install the node_modules
+echo "installing server dependencies"
+npm install
+
 # remove .git folder
 rm -rf .git
 

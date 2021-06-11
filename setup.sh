@@ -1,9 +1,11 @@
 #!/bin/bash
 
 # install database
-if [[ $1 = "mongoose" ]]
+if [[ $1 = "mongoose" ]] || [[ $1 = "mongo" ]] || [[ $1 = "mongodb" ]]
 then
   cp -a templates/mongoose/. ./
+elif
+  cp -a templates/sequelize/. ./
 fi 
 
 # install react app

@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# install database
+if [[ $1 = "mongoose" ]]
+  cp -a templates/mongoose/. ./
+fi 
+
 # install react app
 echo "installing react app"
 npx create-react-app client
@@ -21,5 +26,4 @@ rm -rf .git
 rm setup.sh
 
 # start up the app
-
 yarn start

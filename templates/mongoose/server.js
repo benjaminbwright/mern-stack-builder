@@ -1,5 +1,6 @@
 // dependencies
 const express = require("express");
+const mongoose = require("mongoose");
 
 // app & port
 const app = express();

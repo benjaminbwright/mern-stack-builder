@@ -3,6 +3,9 @@
 # remove .git folder
 rm -rf .git
 
+# initialize git
+git init
+
 # install database and orm/odm setup
 if [[ $1 = "mongoose" ]] || [[ $1 = "mongo" ]] || [[ $1 = "mongodb" ]]
 then
